@@ -52,4 +52,7 @@ fn main() {
         println!("{count}");
         *count+=1;
     }
+    for(word,count) in &map{
+        println!("{word},{count}");
+    }
 }
