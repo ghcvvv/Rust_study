@@ -74,6 +74,25 @@ fn main() {
     for val in v1.iter(){
         println!("{val}");
     }
+    let x = 10;
+
+    // 通过引用捕获
+    let add = |y| x + y;
+    println!("{}", add(5)); // 输出 15
+
+    let mut z = 10;
+
+    // 通过可变引用捕获
+    let mut add_to_z = |y| z += y;
+    add_to_z(5);
+    println!("{}", z); // 输出 15
+
+    let v = vec![1, 2, 3];
+
+    // 通过值捕获
+    let consume_v = || println!("{:?}", v);
+    consume_v(); // 输出 [1, 2, 3]
+    // println!("{:?}", v); // 这行代码将会报错，因为 v 的所有权已经被移到闭包中
 }
 #[test]
 fn iterator_demonstration() {
