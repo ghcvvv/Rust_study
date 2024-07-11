@@ -1,6 +1,5 @@
-workspace = { members = [ "add/adder","closures", "smart_pointers"] }
 [package]
-name = "ch_5"
+name = "smart_pointers"
 version = "0.1.0"
 edition = "2021"
 
